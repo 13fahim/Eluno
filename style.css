@@ -1,0 +1,303 @@
+/* =========================================================
+   ELUNO - Made for Little Moments
+   Baby Boutique Aesthetic & Styling
+========================================================= */
+
+/* Google Fonts: Multiple Bangla & English fonts for dynamic switching */
+@import url('https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@400;500;600;700;800&family=Fredoka:wght@400;500;600;700&family=Hind+Siliguri:wght@400;500;600;700&family=Mina:wght@400;700&family=Noto+Sans+Bengali:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Quicksand:wght@500;600;700&display=swap');
+
+:root {
+  --color-primary: #FF758C;
+  --color-primary-dark: #E2556F;
+  --color-primary-light: #FFF0F3;
+  --color-peach: #FFA07A;
+  --color-peach-light: #FFF3EE;
+  --color-mint: #4ECCA3;
+  --color-mint-light: #E8F8F3;
+  --color-sky: #54A0FF;
+  --color-sky-light: #EBF3FF;
+  --color-cream: #FFFDF9;
+  --color-card-bg: #FFFFFF;
+  --color-text-main: #2D3748;
+  --color-text-muted: #718096;
+  
+  /* Dynamic Font Variables */
+  --font-main: 'Hind Siliguri', 'Quicksand', sans-serif;
+  --font-title: 'Quicksand', 'Hind Siliguri', sans-serif;
+  --base-font-size: 100%;
+
+  /* Specific Element Typography Variables */
+  --font-heading: 'Quicksand', 'Hind Siliguri', sans-serif;
+  --size-heading: 100%;
+  --font-product-title: 'Hind Siliguri', sans-serif;
+  --size-product-title: 0.875rem;
+  --size-price: 1.15rem;
+  --font-body: 'Hind Siliguri', sans-serif;
+  --size-body: 0.85rem;
+}
+
+html {
+  font-size: var(--base-font-size, 100%);
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body, var(--font-main));
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-text-main);
+  font-family: var(--font-body, var(--font-main));
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4.serif-title, .serif-title, .heading-font {
+  font-family: var(--font-heading, var(--font-title));
+}
+
+/* Specific Target Classes */
+.product-title-el {
+  font-family: var(--font-product-title, var(--font-main)) !important;
+  font-size: var(--size-product-title, 0.875rem) !important;
+}
+
+.product-price-el {
+  font-size: var(--size-price, 1.15rem) !important;
+}
+
+.product-desc-el, p.body-desc {
+  font-family: var(--font-body, var(--font-main));
+  font-size: var(--size-body, 0.85rem);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF5F7;
+}
+::-webkit-scrollbar-thumb {
+  background: #FFB3C1;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF758C;
+}
+
+/* Floating animation */
+@keyframes floatSoft {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: floatSoft 4s ease-in-out infinite;
+}
+
+/* Soft pulse animation */
+@keyframes softPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.animate-soft-pulse {
+  animation: softPulse 2.5s infinite ease-in-out;
+}
+
+/* Shimmer effect for promo */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer-badge {
+  background: linear-gradient(90deg, #FF758C 0%, #FFA07A 50%, #FF758C 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite linear;
+}
+
+/* Cart bounce effect */
+@keyframes cartBump {
+  0% { transform: scale(1); }
+  35% { transform: scale(1.3) rotate(-6deg); }
+  70% { transform: scale(0.92) rotate(4deg); }
+  100% { transform: scale(1); }
+}
+
+.cart-bump {
+  animation: cartBump 0.4s ease-out;
+}
+
+/* Product Card Styling */
+.product-card {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(255, 117, 140, 0.15);
+  background: #ffffff;
+  border-radius: 1.5rem;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px -8px rgba(255, 117, 140, 0.18), 0 0 0 1.5px rgba(255, 117, 140, 0.3);
+}
+
+.product-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  background-color: #FFF6F7;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+}
+
+.product-img-wrapper img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.product-card:hover .product-img-wrapper img {
+  transform: scale(1.08);
+}
+
+/* Quick Action overlay */
+.product-actions-overlay {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: all 0.25s ease-out;
+}
+
+.product-card:hover .product-actions-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slide Drawer Overlay */
+.drawer-backdrop {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.drawer-backdrop.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.drawer-panel {
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.drawer-backdrop.active .drawer-panel {
+  transform: translateX(0);
+}
+
+/* Modal animation */
+.modal-overlay {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(5px);
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  transform: scale(0.92) translateY(15px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-overlay.active .modal-content {
+  transform: scale(1) translateY(0);
+}
+
+/* Toast Notification */
+#toast-container {
+  position: fixed;
+  bottom: 85px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.toast {
+  pointer-events: auto;
+  min-width: 280px;
+  max-width: 380px;
+  background: #2D3748;
+  color: #ffffff;
+  padding: 12px 18px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(45, 55, 72, 0.25);
+  border-left: 4px solid #FF758C;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transform: translateY(30px);
+  opacity: 0;
+  animation: slideToast 0.3s forwards cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideToast {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Category Pill Active State */
+.cat-pill.active {
+  background: linear-gradient(135deg, #FF758C 0%, #FFA07A 100%);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 6px 16px rgba(255, 117, 140, 0.35);
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 990;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.38);
+  transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.08) translateY(-3px);
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);
+}
+
+/* Print styles for order receipt */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-receipt, #printable-receipt * {
+    visibility: visible;
+  }
+  #printable-receipt {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+  }
+}

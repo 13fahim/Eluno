@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eluno - Made for Little Moments | প্রিমিয়াম বেবি শপ</title>
+  <meta name="description" content="Eluno - শিশুর মিষ্টি মুহূর্তগুলোর বিশ্বস্ত সঙ্গী। ১০০% অর্গানিক কটন বেবি পোশাক, মন্টেসরি কাঠের খেলনা এবং স্পেশাল গিফট হ্যাম্পার।">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23FFF0F3' stroke='%23FF758C' stroke-width='4'/><text x='50' y='63' font-size='42' font-weight='bold' fill='%23FF758C' text-anchor='middle'>E</text></svg>">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            baby: {
+              coral: '#FF758C',
+              coralDark: '#E2556F',
+              coralLight: '#FFF0F3',
+              peach: '#FFA07A',
+              peachLight: '#FFF5F0',
+              mint: '#4ECCA3',
+              mintLight: '#E8F8F3',
+              sky: '#54A0FF',
+              skyLight: '#EEF6FF',
+              cream: '#FFFDF9',
+              dark: '#2D3748'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom Styling -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#FFFDF9] text-slate-800 antialiased selection:bg-rose-100 selection:text-rose-800">
+
+  <!-- ==========================================
+       TOP ANNOUNCEMENT BAR
+  ========================================== -->
+  <div class="bg-gradient-to-r from-[#FF758C] via-[#FF8E72] to-[#FFA07A] text-white py-2 px-4 text-xs font-medium shadow-xs">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-1.5 text-center sm:text-left">
+      <div class="flex items-center gap-2">
+        <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-white text-[#FF758C] uppercase tracking-wider shadow-xs">স্পেশাল অফার</span>
+        <span id="announcement-text">🎉 Eluno-র নতুন কালেকশনে ১০% ছাড়! কুপন কোড: <strong class="text-amber-100 font-bold tracking-wider">MOMENTS10</strong></span>
+      </div>
+      <div class="flex items-center gap-4 text-rose-50 text-[11px]">
+        <span>🚚 সারা দেশে ক্যাশ অন ডেলিভারি</span>
+        <span class="hidden md:inline">•</span>
+        <span id="top-hotline" class="hidden md:inline">📞 হটলাইন: +880 1700-000000</span>
+        <span class="hidden md:inline">•</span>
+        <a href="admin.html" class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white/20 hover:bg-white text-white hover:text-[#FF758C] font-bold text-[11px] transition-all">
+          <span>⚙️ এডমিন প্যানেল</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       MAIN NAVIGATION BAR
+  ========================================== -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-rose-100 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20 gap-4">
+        
+        <!-- Brand Logo -->
+        <a href="index.html" class="flex items-center gap-3 group flex-shrink-0">
+          <div class="relative w-13 h-13 sm:w-14 sm:h-14 rounded-2xl overflow-hidden border-2 border-rose-200 shadow-sm bg-gradient-to-tr from-rose-50 to-amber-50 flex items-center justify-center p-1 transition-transform group-hover:scale-105">
+            <img 
+              src="assets/logo.jpg" 
+              alt="Eluno Logo" 
+              class="w-full h-full object-contain rounded-xl"
+              onerror="this.src='assets/logo.svg';"
+            />
+          </div>
+          <div>
+            <div class="flex items-center gap-1.5">
+              <h1 class="text-2xl sm:text-3xl font-black text-slate-800 tracking-tight leading-none">
+                El<span class="text-[#FF758C]">uno</span>
+              </h1>
+              <span class="text-xs">👶</span>
+            </div>
+            <p class="text-[11px] font-medium text-rose-500 italic tracking-wide mt-0.5">Made for Little Moments.</p>
+          </div>
+        </a>
+
+        <!-- Desktop Search Bar -->
+        <div class="hidden md:flex flex-1 max-w-md mx-6">
+          <div class="relative w-full">
+            <input 
+              type="text" 
+              id="search-input" 
+              placeholder="বেবি রম্পার, খেলনা, গিফট বক্স খুঁজুন..." 
+              class="w-full pl-10 pr-4 py-2.5 bg-rose-50/50 border border-rose-100 rounded-full text-xs md:text-sm focus:outline-none focus:ring-2 focus:ring-[#FF758C] focus:bg-white transition-all shadow-inner"
+            />
+            <svg class="w-4 h-4 text-rose-400 absolute left-3.5 top-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Navigation Actions -->
+        <div class="flex items-center gap-2 sm:gap-3">
+          
+          <!-- Admin Direct Link (Desktop) -->
+          <a 
+            href="admin.html" 
+            title="এডমিন প্যানেলে যান"
+            class="hidden lg:flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-bold text-slate-600 hover:text-[#FF758C] hover:bg-rose-50 border border-slate-200 hover:border-rose-200 transition-colors">
+            <span>⚙️</span>
+            <span>এডমিন</span>
+          </a>
+
+          <!-- Facebook Page Link Button -->
+          <a 
+            id="nav-facebook-link"
+            href="https://facebook.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            title="আমাদের ফেসবুক পেজ ভিজিট করুন"
+            class="hidden sm:flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-semibold bg-[#1877F2]/10 hover:bg-[#1877F2]/20 text-[#1877F2] transition-colors">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            <span class="hidden md:inline">Facebook</span>
+          </a>
+
+          <!-- Wishlist Trigger -->
+          <button 
+            onclick="openWishlistModal()"
+            title="উইশলিস্ট"
+            class="relative p-2.5 rounded-full hover:bg-rose-50 text-slate-700 hover:text-[#FF758C] transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+            </svg>
+            <span class="wishlist-badge-count hidden absolute top-1 right-1 w-5 h-5 bg-[#FF758C] text-white text-[10px] font-bold rounded-full flex items-center justify-center">0</span>
+          </button>
+
+          <!-- Shopping Cart Trigger Button -->
+          <button 
+            onclick="openCartDrawer()"
+            title="শপিং ব্যাগ"
+            class="cart-btn-trigger relative flex items-center gap-2 px-4 py-2.5 rounded-full bg-gradient-to-r from-[#FF758C] to-[#FFA07A] hover:opacity-95 text-white shadow-md shadow-rose-500/20 transition-all">
+            <div class="relative">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+              </svg>
+              <span class="cart-badge-count hidden absolute -top-2.5 -right-2.5 w-5 h-5 bg-white text-[#FF758C] text-[10px] font-black rounded-full flex items-center justify-center border-2 border-[#FF758C]">0</span>
+            </div>
+            <span class="hidden sm:inline text-xs font-bold tracking-wide">কার্ট</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Search Bar -->
+      <div class="md:hidden pb-3">
+        <div class="relative w-full">
+          <input 
+            type="text" 
+            id="search-input-mobile" 
+            placeholder="বেবি ড্রেস, খেলনা, গিফট বক্স খুঁজুন..." 
+            class="w-full pl-9 pr-4 py-2 bg-rose-50/60 border border-rose-100 rounded-full text-xs focus:outline-none focus:ring-2 focus:ring-[#FF758C]"
+          />
+          <svg class="w-4 h-4 text-rose-400 absolute left-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       HERO BANNER SECTION (Pastel Baby Boutique)
+  ========================================== -->
+  <section class="relative overflow-hidden bg-gradient-to-b from-[#FFF0F3]/80 via-[#FFF9F6] to-[#FFFDF9] py-10 md:py-16 border-b border-rose-100/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        
+        <!-- Left Banner Content -->
+        <div class="lg:col-span-7 space-y-5 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-100/80 border border-rose-200 text-[#E2556F] text-xs font-bold tracking-wider">
+            <span id="hero-badge-text">✨ Little Moments, Big Love</span>
+          </div>
+
+          <h2 id="hero-title-text" class="serif-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 leading-tight">
+            শিশুর প্রথম হাসি আর প্রতিটি মিষ্টি মুহূর্তের <span class="text-[#FF758C] italic">পরম যত্ন।</span>
+          </h2>
+
+          <p id="hero-subtitle-text" class="text-sm sm:text-base text-slate-600 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+            ১০০% সার্টিফাইড অর্গানিক কটন বেবি পোশাক, প্রাকৃতিক কাঠের মন্টেসরি খেলনা ও প্রিমিয়াম গিফট হ্যাম্পার—যা আপনার ছোট্ট সোনামণিকে দেবে অতুলনীয় আরাম ও নিরাপদ ভালোবাসা।
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
+            <a 
+              href="#products-section" 
+              class="px-7 py-3.5 rounded-full bg-gradient-to-r from-[#FF758C] to-[#FFA07A] hover:opacity-95 text-white font-bold text-sm shadow-lg shadow-rose-400/25 flex items-center gap-2 transition-all hover:gap-3">
+              <span id="hero-btn1-text">কালেকশন দেখুন</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+            <button 
+              id="hero-btn2-text"
+              onclick="selectCategory('giftbox')" 
+              class="px-6 py-3.5 rounded-full bg-white hover:bg-rose-50 text-[#E2556F] font-bold text-sm border border-rose-200 shadow-sm transition-all">
+              🎁 বেবি গিফট বক্স
+            </button>
+          </div>
+
+          <!-- Trust Badges Under CTA -->
+          <div class="pt-4 grid grid-cols-3 gap-2 border-t border-rose-100 max-w-lg mx-auto lg:mx-0">
+            <div class="text-center lg:text-left">
+              <div class="font-extrabold text-slate-800 text-sm md:text-base">১০০% অর্গানিক</div>
+              <div class="text-[11px] text-slate-500">ত্বকবান্ধব ফেব্রিক</div>
+            </div>
+            <div class="text-center lg:text-left">
+              <div class="font-extrabold text-slate-800 text-sm md:text-base">ক্যাশ অন ডেলিভারি</div>
+              <div class="text-[11px] text-slate-500">পণ্য দেখে মূল্য দিন</div>
+            </div>
+            <div class="text-center lg:text-left">
+              <div class="font-extrabold text-slate-800 text-sm md:text-base">সহজ এক্সচেঞ্জ</div>
+              <div class="text-[11px] text-slate-500">৭ দিনের মধ্যে পরিবর্তন</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Visual Showcase -->
+        <div class="lg:col-span-5 relative flex justify-center">
+          <div class="relative w-full max-w-md">
+            <!-- Decorative Background Ring -->
+            <div class="absolute -inset-4 bg-gradient-to-tr from-rose-200/50 via-amber-100/40 to-transparent rounded-3xl blur-2xl -z-10"></div>
+            
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white">
+              <img 
+                id="hero-image-img"
+                src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=800&q=80" 
+                alt="Eluno Baby Collection" 
+                class="w-full h-80 sm:h-96 object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/75 via-transparent to-transparent flex flex-col justify-end p-6 text-white">
+                <span class="px-3 py-1 bg-[#FF758C] text-white text-[11px] font-bold rounded-lg w-fit mb-2 shadow-sm">স্পেশাল কালেকশন</span>
+                <h4 class="text-lg font-bold">Little Moments Luxury Hampers</h4>
+                <p class="text-xs text-rose-100">নতুন সোনামণির জন্য সবচেয়ে মিষ্টি উপহার</p>
+              </div>
+            </div>
+
+            <!-- Floating Badge -->
+            <div class="animate-float absolute -bottom-5 -left-4 sm:-left-6 bg-white p-3.5 rounded-2xl shadow-xl border border-rose-100 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-rose-50 flex items-center justify-center text-xl">👶</div>
+              <div>
+                <div class="text-xs font-bold text-slate-800">৫,০০০+ অভিভাবকের আস্থা</div>
+                <div class="text-[10px] text-[#FF758C] flex items-center gap-1 font-bold">
+                  ★★★★★ ৫.০ রেটিং
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       TRUST FEATURES BAR
+  ========================================== -->
+  <section class="border-y border-rose-100 bg-white py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-2xl bg-rose-50 text-[#FF758C] flex items-center justify-center text-2xl flex-shrink-0">🌿</div>
+          <div>
+            <h5 class="text-xs sm:text-sm font-bold text-slate-800">১০০% নিরাপদ ফেব্রিক</h5>
+            <p class="text-[11px] text-slate-500">শিশুর ত্বকে অ্যালার্জি ও র‍্যাশ মুক্ত</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-2xl bg-sky-50 text-[#54A0FF] flex items-center justify-center text-2xl flex-shrink-0">🚀</div>
+          <div>
+            <h5 class="text-xs sm:text-sm font-bold text-slate-800">দ্রুততম হোম ডেলিভারি</h5>
+            <p class="text-[11px] text-slate-500">ঢাকায় ২৪-৪৮ ঘণ্টা, সারাদেশে ৩ দিন</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-[#4ECCA3] flex items-center justify-center text-2xl flex-shrink-0">💵</div>
+          <div>
+            <h5 class="text-xs sm:text-sm font-bold text-slate-800">ক্যাশ অন ডেলিভারি</h5>
+            <p class="text-[11px] text-slate-500">হাতে পেয়ে চেক করে মূল্য দিন</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-2xl bg-amber-50 text-[#FFA07A] flex items-center justify-center text-2xl flex-shrink-0">📱</div>
+          <div>
+            <h5 class="text-xs sm:text-sm font-bold text-slate-800">বিকাশ ও নগদ পেমেন্ট</h5>
+            <p class="text-[11px] text-slate-500">সহজ ও দ্রুত পেমেন্ট সুবিধা</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       PRODUCTS & CATEGORIES SECTION
+  ========================================== -->
+  <section id="products-section" class="py-12 md:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Title -->
+    <div class="text-center max-w-2xl mx-auto mb-8">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-100 text-[#E2556F] text-xs font-bold mb-2">
+        <span id="catalog-badge-text">🌸 আমাদের স্পেশাল কালেকশন</span>
+      </div>
+      <h3 id="catalog-title-text" class="serif-title text-2xl sm:text-3xl md:text-4xl font-bold text-slate-800">
+        আপনার সোনামণির জন্য সেরা পণ্যটি বেছে নিন
+      </h3>
+      <p id="catalog-subtitle-text" class="text-xs sm:text-sm text-slate-500 mt-2">
+        নবজাতক থেকে ৫ বছর বয়সী বাচ্চাদের জন্য প্রিমিয়াম ড্রেস, মন্টেসরি খেলনা ও উপহার সামগ্রী
+      </p>
+    </div>
+
+    <!-- Category Pills Navigation -->
+    <div class="flex items-center justify-start sm:justify-center gap-2 overflow-x-auto pb-4 mb-6 no-scrollbar" id="category-pills">
+      <!-- Rendered by app.js -->
+    </div>
+
+    <!-- Filter & Sort Bar -->
+    <div class="flex flex-wrap items-center justify-between gap-3 bg-white p-3.5 rounded-2xl border border-rose-100 mb-8 shadow-xs">
+      <div class="text-xs text-slate-500 font-medium">
+        মোট <strong id="product-count" class="text-slate-800 font-bold">১২টি</strong> পণ্য প্রদর্শিত হচ্ছে
+      </div>
+      <div class="flex items-center gap-2">
+        <label for="sort-select" class="text-xs text-slate-500">সর্ট করুন:</label>
+        <select id="sort-select" class="text-xs bg-rose-50/50 border border-rose-200 rounded-xl px-3 py-1.5 font-medium text-slate-700 focus:outline-none focus:ring-2 focus:ring-[#FF758C]">
+          <option value="featured">ফিচার্ড কালেকশন</option>
+          <option value="price-low">মূল্য: কম থেকে বেশি</option>
+          <option value="price-high">মূল্য: বেশি থেকে কম</option>
+          <option value="rating">সর্বোচ্চ রেটিং</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6" id="products-grid">
+      <!-- Rendered by app.js -->
+    </div>
+
+    <!-- Empty State for Search -->
+    <div id="no-products-found" class="hidden text-center py-16">
+      <div class="w-16 h-16 rounded-full bg-rose-50 text-3xl flex items-center justify-center mx-auto mb-3">🔍</div>
+      <h4 class="font-bold text-slate-700 text-base mb-1">কোনো প্রোডাক্ট পাওয়া যায়নি</h4>
+      <p class="text-xs text-slate-500 mb-4">অন্য কোনো নাম দিয়ে সার্চ করুন অথবা ফিল্টার পরিবর্তন করুন</p>
+      <button onclick="resetFilters()" class="px-5 py-2 rounded-full bg-[#FF758C] text-white text-xs font-bold hover:bg-[#E2556F]">
+        সব প্রোডাক্ট দেখুন
+      </button>
+    </div>
+
+  </section>
+
+  <!-- ==========================================
+       CUSTOMER REVIEWS (TRUST)
+  ========================================== -->
+  <section class="py-12 bg-gradient-to-b from-[#FFFDF9] via-[#FFF5F7] to-[#FFFDF9] border-t border-rose-100/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-8">
+        <span class="text-xs font-bold text-[#E2556F] uppercase tracking-wider">অভিভাবকদের মতামত</span>
+        <h3 class="serif-title text-2xl sm:text-3xl font-bold text-slate-800 mt-1">মা-বাবারা Eluno সম্পর্কে কী বলছেন</h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Review 1 -->
+        <div class="p-6 rounded-3xl bg-white border border-rose-100 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center text-amber-400 mb-3 text-sm">★★★★★</div>
+            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed italic mb-4">
+              "অর্গানিক কটন রম্পার সেটটি হাতে পাওয়ার পর আমি সত্যিই মুগ্ধ! কাপড়টি এতো নরম যে আমার বাচ্চার ত্বকে কোনো দাগ পড়েনি। প্যাকিংটাও ছিল অসাধারণ।"
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-3 border-t border-rose-50">
+            <div class="w-10 h-10 rounded-full bg-rose-100 text-[#FF758C] font-bold flex items-center justify-center text-sm">না</div>
+            <div>
+              <div class="text-xs font-bold text-slate-800">নাজমুন নাহার</div>
+              <div class="text-[10px] text-emerald-600 font-medium">✓ ভেরিফাইড বায়ার (ঢাকা)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="p-6 rounded-3xl bg-white border border-rose-100 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center text-amber-400 mb-3 text-sm">★★★★★</div>
+            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed italic mb-4">
+              "আমার ভাইয়ের নবজাতক ছেলের জন্য গিফট বক্স অর্ডার করেছিলাম। কাঠের র্যাটেল ও ড্রেসগুলো প্রিমিয়াম কোয়ালিটির ছিল। সবাই খুব প্রশংসা করেছে।"
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-3 border-t border-rose-50">
+            <div class="w-10 h-10 rounded-full bg-sky-100 text-[#54A0FF] font-bold flex items-center justify-center text-sm">রা</div>
+            <div>
+              <div class="text-xs font-bold text-slate-800">রাকিবুল ইসলাম</div>
+              <div class="text-[10px] text-emerald-600 font-medium">✓ ভেরিফাইড বায়ার (চট্টগ্রাম)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="p-6 rounded-3xl bg-white border border-rose-100 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center text-amber-400 mb-3 text-sm">★★★★★</div>
+            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed italic mb-4">
+              "কাঠের মন্টেসরি র্যাটেলটা ভীষণ সুন্দর ও মসৃণ। কোনো কেমিক্যাল গন্ধ নেই। আমার ৫ মাসের মেয়ে এটা ধরে খেলা করতে ভীষণ পছন্দ করে।"
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-3 border-t border-rose-50">
+            <div class="w-10 h-10 rounded-full bg-amber-100 text-[#FFA07A] font-bold flex items-center justify-center text-sm">সা</div>
+            <div>
+              <div class="text-xs font-bold text-slate-800">সাদিয়া আফরিন</div>
+              <div class="text-[10px] text-emerald-600 font-medium">✓ ভেরিফাইড বায়ার (সিলেট)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FAQ SECTION
+  ========================================== -->
+  <section class="py-12 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-8">
+        <h3 class="serif-title text-2xl font-bold text-slate-800">সাধারণ কিছু প্রশ্নের উত্তর (FAQ)</h3>
+        <p class="text-xs text-slate-500">আপনার প্রয়োজনীয় তথ্য জেনে নিন</p>
+      </div>
+
+      <div id="faq-dynamic-list" class="space-y-3">
+        <details class="bg-rose-50/40 p-4 rounded-2xl border border-rose-100 group">
+          <summary class="font-bold text-xs sm:text-sm text-slate-800 cursor-pointer list-none flex justify-between items-center">
+            <span>ডেলিভারি চার্জ কত এবং কতদিনে পাব?</span>
+            <span class="text-[#FF758C] group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="text-xs text-slate-600 mt-2.5 pt-2 border-t border-rose-100 leading-relaxed">
+            ঢাকা সিটির ভেতরে ডেলিভারি চার্জ মাত্র ৬০ টাকা এবং ২৪ থেকে ৪৮ ঘণ্টার মধ্যে ডেলিভারি পাবেন। ঢাকা সিটির বাইরে চার্জ ১২০ টাকা এবং ২ থেকে ৩ কর্মদিবসে পণ্য পৌঁছানো হয়। ৳২,৫০০ বা তার বেশি শপিংয়ে ডেলিভারি সম্পূর্ণ ফ্রি!
+          </p>
+        </details>
+
+        <details class="bg-rose-50/40 p-4 rounded-2xl border border-rose-100 group">
+          <summary class="font-bold text-xs sm:text-sm text-slate-800 cursor-pointer list-none flex justify-between items-center">
+            <span>ক্যাশ অন ডেলিভারি এবং বিকাশ/নগদে পেমেন্ট কীভাবে করব?</span>
+            <span class="text-[#FF758C] group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="text-xs text-slate-600 mt-2.5 pt-2 border-t border-rose-100 leading-relaxed">
+            আমরা ক্যাশ অন ডেলিভারি সাপোর্ট করি—অর্থাৎ পণ্য হাতে পেয়ে চেক করে মূল্য দিতে পারবেন। এছাড়াও চেকআউটে আমাদের দেওয়া বিকাশ ও নগদ নম্বরে টাকা পাঠিয়ে আপনার নম্বর ও ট্রানজেকশন আইডি (TrxID) দিয়ে অর্ডার কনফার্ম করতে পারেন।
+          </p>
+        </details>
+
+        <details class="bg-rose-50/40 p-4 rounded-2xl border border-rose-100 group">
+          <summary class="font-bold text-xs sm:text-sm text-slate-800 cursor-pointer list-none flex justify-between items-center">
+            <span>সাইজ না মিললে কি পরিবর্তন (Exchange) করা যাবে?</span>
+            <span class="text-[#FF758C] group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="text-xs text-slate-600 mt-2.5 pt-2 border-t border-rose-100 leading-relaxed">
+            অবশ্যই! প্রোডাক্ট হাতে পাওয়ার ৭ দিনের মধ্যে আমাদের জানালে সম্পূর্ণ ফ্রেশ কন্ডিশনে থাকা পোশাকের সাইজ এক্সচেঞ্জ করে দেওয়া হয়।
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       MAIN FOOTER
+  ========================================== -->
+  <footer class="bg-slate-900 text-slate-300 pt-12 pb-8 border-t-2 border-[#FF758C]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        
+        <!-- Brand Info -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-2xl bg-white p-1 border border-rose-200 flex items-center justify-center overflow-hidden">
+              <img src="assets/logo.jpg" alt="Eluno" class="w-full h-full object-contain rounded-xl" onerror="this.src='assets/logo.svg';"/>
+            </div>
+            <div>
+              <h4 class="text-xl font-bold text-white leading-none">El<span class="text-[#FF758C]">uno</span></h4>
+              <p class="text-[11px] text-rose-300 italic">Made for Little Moments.</p>
+            </div>
+          </div>
+          <p id="footer-about-text" class="text-xs text-slate-400 leading-relaxed">
+            শিশুর সংবেদনশীল ত্বকের জন্য পরম যত্ন ও প্রিমিয়াম ভালোবাসার স্পর্শ। প্রতিটি মিষ্টি মুহূর্ত আনন্দময় হোক।
+          </p>
+          <div class="flex items-center gap-3 pt-1">
+            <a id="footer-facebook-link" href="https://facebook.com" target="_blank" class="w-9 h-9 rounded-full bg-white/10 hover:bg-[#1877F2] text-white flex items-center justify-center transition-colors">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a id="footer-instagram-link" href="https://instagram.com" target="_blank" class="w-9 h-9 rounded-full bg-white/10 hover:bg-[#E4405F] text-white flex items-center justify-center transition-colors">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a id="footer-whatsapp-link" href="https://wa.me/" target="_blank" class="w-9 h-9 rounded-full bg-white/10 hover:bg-[#25D366] text-white flex items-center justify-center transition-colors">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h5 class="text-sm font-bold text-white uppercase tracking-wider mb-4">কুইক লিংকস</h5>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#products-section" class="hover:text-[#FF758C] transition-colors">সব প্রোডাক্টস</a></li>
+            <li><button onclick="selectCategory('newborn')" class="hover:text-[#FF758C] transition-colors">নবজাতক পোশাক</button></li>
+            <li><button onclick="selectCategory('toys')" class="hover:text-[#FF758C] transition-colors">মন্টেসরি কাঠের খেলনা</button></li>
+            <li><button onclick="selectCategory('giftbox')" class="hover:text-[#FF758C] transition-colors">বেবি গিফট বক্স হ্যাম্পার</button></li>
+            <li><a href="admin.html" class="text-rose-400 font-bold hover:underline">🔐 এডমিন কন্ট্রোল প্যানেল</a></li>
+          </ul>
+        </div>
+
+        <!-- Policies -->
+        <div>
+          <h5 class="text-sm font-bold text-white uppercase tracking-wider mb-4">সাহায্য ও পলিসি</h5>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#" class="hover:text-[#FF758C] transition-colors">ডেলিভারি পলিসি</a></li>
+            <li><a href="#" class="hover:text-[#FF758C] transition-colors">রিটার্ন ও এক্সচেঞ্জ নিয়মাবলী</a></li>
+            <li><a href="#" class="hover:text-[#FF758C] transition-colors">সাইজ গাইডলাইন (Size Chart)</a></li>
+            <li><a href="#" class="hover:text-[#FF758C] transition-colors">প্রাইভেসি পলিসি</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Helpline -->
+        <div>
+          <h5 class="text-sm font-bold text-white uppercase tracking-wider mb-4">যোগাযোগ ও হেল্পলাইন</h5>
+          <ul class="space-y-2.5 text-xs text-slate-400">
+            <li class="flex items-start gap-2">
+              <span class="text-[#FF758C]">📍</span>
+              <span id="footer-address">বনানী, ঢাকা - ১২১৩, বাংলাদেশ</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-[#FF758C]">📞</span>
+              <span id="footer-hotline">+880 1700-000000 (সকাল ৯টা - রাত ১০টা)</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-[#FF758C]">✉️</span>
+              <span id="footer-email">support@eluno.com</span>
+            </li>
+          </ul>
+          
+          <div class="mt-4 pt-4 border-t border-slate-800">
+            <div class="text-[11px] text-slate-400 mb-2">নিরাপদ পেমেন্ট মেথড:</div>
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="px-2.5 py-1 bg-white/10 rounded-lg text-[10px] text-white font-bold">bKash (বিকাশ)</span>
+              <span class="px-2.5 py-1 bg-white/10 rounded-lg text-[10px] text-white font-bold">Nagad (নগদ)</span>
+              <span class="px-2.5 py-1 bg-white/10 rounded-lg text-[10px] text-white font-bold">Cash on Delivery</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-6 border-t border-slate-800 text-center text-xs text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-3">
+        <p>© 2026 <strong>Eluno</strong>. Made for Little Moments. সর্বস্বত্ব সংরক্ষিত।</p>
+        <div class="flex items-center gap-4 text-[11px]">
+          <a href="admin.html" class="text-rose-400 hover:text-rose-300 font-medium">এডমিন লগইন</a>
+          <span>•</span>
+          <span>Made with ❤️ for Bangladeshi Parents</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       SLIDE-OVER CART DRAWER
+  ========================================== -->
+  <div id="cart-drawer" class="drawer-backdrop fixed inset-0 z-50 bg-black/50">
+    <div class="drawer-panel absolute right-0 top-0 bottom-0 w-full max-w-md bg-white shadow-2xl flex flex-col justify-between">
+      
+      <!-- Drawer Header -->
+      <div class="p-4 border-b border-rose-100 flex items-center justify-between bg-gradient-to-r from-[#FF758C] to-[#FFA07A] text-white">
+        <div class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+          <h4 class="font-bold text-sm tracking-wide">আপনার শপিং ব্যাগ</h4>
+        </div>
+        <button onclick="closeCartDrawer()" class="p-1.5 rounded-full hover:bg-white/20 text-white transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <!-- Free Shipping Banner -->
+      <div class="p-3 bg-rose-50 border-b border-rose-100 text-xs">
+        <div id="free-shipping-text" class="text-rose-900 mb-1.5 font-medium">
+          শপিং শুরু করুন!
+        </div>
+        <div class="w-full h-1.5 bg-rose-200/60 rounded-full overflow-hidden">
+          <div id="free-shipping-progress" class="h-full bg-[#FF758C] transition-all duration-300" style="width: 0%;"></div>
+        </div>
+      </div>
+
+      <!-- Drawer Items List -->
+      <div class="flex-1 overflow-y-auto p-4 space-y-3" id="cart-items-list">
+        <!-- Rendered by app.js -->
+      </div>
+
+      <!-- Empty State -->
+      <div id="cart-empty-state" class="hidden flex-1 flex flex-col items-center justify-center p-6 text-center">
+        <div class="w-16 h-16 rounded-full bg-rose-50 flex items-center justify-center text-3xl mb-3">🛍️</div>
+        <h5 class="font-bold text-slate-800 text-sm mb-1">আপনার কার্ট খালি!</h5>
+        <p class="text-xs text-slate-500 mb-4">আমাদের কালেকশন থেকে আপনার সোনামণির পছন্দের জিনিসটি বেছে নিন।</p>
+        <button onclick="closeCartDrawer()" class="px-5 py-2.5 bg-[#FF758C] text-white rounded-full text-xs font-bold hover:bg-[#E2556F]">
+          কেনাকাটা করুন
+        </button>
+      </div>
+
+      <!-- Drawer Footer -->
+      <div id="cart-drawer-footer" class="p-4 bg-slate-50 border-t border-slate-200 space-y-3">
+        <!-- Coupon input -->
+        <div class="flex gap-2">
+          <input 
+            type="text" 
+            id="promo-input" 
+            placeholder="কুপন কোড (যেমন: MOMENTS10)" 
+            class="flex-1 px-3 py-2 bg-white border border-slate-200 rounded-xl text-xs uppercase focus:outline-none focus:ring-1 focus:ring-[#FF758C]"
+          />
+          <button 
+            onclick="applyPromoCode()"
+            class="px-4 py-2 bg-slate-800 hover:bg-slate-900 text-white font-bold text-xs rounded-xl">
+            অ্যাপ্লাই
+          </button>
+        </div>
+
+        <!-- Calculations -->
+        <div class="space-y-1.5 text-xs text-slate-600">
+          <div class="flex justify-between">
+            <span>সাব-টোটাল:</span>
+            <span id="cart-subtotal" class="font-bold text-slate-800">৳০</span>
+          </div>
+          <div id="cart-discount-row" class="hidden flex justify-between text-rose-600 font-bold">
+            <span>কুপন ছাড়:</span>
+            <span id="cart-discount-val">-৳০</span>
+          </div>
+          <div class="flex justify-between">
+            <span>ডেলিভারি চার্জ:</span>
+            <span id="cart-delivery" class="font-bold text-slate-800">৳৬০</span>
+          </div>
+          <div class="flex justify-between text-sm font-extrabold text-slate-900 pt-2 border-t border-slate-200">
+            <span>সর্বমোট:</span>
+            <span id="cart-grand-total" class="text-[#FF758C]">৳০</span>
+          </div>
+        </div>
+
+        <button 
+          onclick="openCheckoutModal()" 
+          class="w-full py-3.5 bg-gradient-to-r from-[#FF758C] to-[#FFA07A] hover:opacity-95 text-white font-bold rounded-2xl text-sm shadow-md transition-all flex items-center justify-center gap-2">
+          <span>চেকআউট করুন</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==========================================
+       PRODUCT QUICK VIEW MODAL
+  ========================================== -->
+  <div id="quick-view-modal" class="modal-overlay fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4">
+    <div class="modal-content relative bg-white w-full max-w-2xl rounded-3xl overflow-hidden shadow-2xl border border-rose-100">
+      <!-- Close Button -->
+      <button onclick="closeQuickView()" class="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center transition-colors">
+        ✕
+      </button>
+      <!-- Content Container -->
+      <div id="quick-view-content">
+        <!-- Rendered by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       WISHLIST MODAL
+  ========================================== -->
+  <div id="wishlist-modal" class="modal-overlay fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4">
+    <div class="modal-content relative bg-white w-full max-w-lg rounded-3xl overflow-hidden shadow-2xl border border-rose-100 max-h-[85vh] flex flex-col">
+      <div class="p-4 bg-gradient-to-r from-[#FF758C] to-[#FFA07A] text-white flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span>💖</span>
+          <h4 class="font-bold text-sm">আপনার পছন্দের তালিকা (Wishlist)</h4>
+        </div>
+        <button onclick="closeWishlistModal()" class="w-8 h-8 rounded-full bg-white/20 hover:bg-white/30 text-white flex items-center justify-center">
+          ✕
+        </button>
+      </div>
+      <div class="flex-1 overflow-y-auto p-4 space-y-3" id="wishlist-items-list">
+        <!-- Rendered by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       CHECKOUT MODAL & ORDER FORM (COD + bKash + Nagad)
+  ========================================== -->
+  <div id="checkout-modal" class="modal-overlay fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4">
+    <div class="modal-content relative bg-white w-full max-w-2xl rounded-3xl overflow-hidden shadow-2xl border border-rose-200 max-h-[92vh] flex flex-col">
+      
+      <!-- Checkout Header -->
+      <div class="p-4 bg-gradient-to-r from-[#FF758C] to-[#FFA07A] text-white flex items-center justify-between">
+        <div>
+          <h4 class="font-bold text-base flex items-center gap-2">
+            <span>🛒</span>
+            <span>অর্ডার কনফার্ম করুন</span>
+          </h4>
+          <p class="text-[11px] text-rose-100">সঠিক তথ্য দিয়ে দ্রুত অর্ডার সম্পন্ন করুন</p>
+        </div>
+        <button onclick="closeCheckoutModal()" class="w-8 h-8 rounded-full bg-white/20 hover:bg-white/30 text-white flex items-center justify-center">
+          ✕
+        </button>
+      </div>
+
+      <!-- Checkout Form Body -->
+      <div class="flex-1 overflow-y-auto p-5 space-y-5">
+        <form id="checkout-form" onsubmit="submitOrder(event)" class="space-y-4">
+          
+          <!-- Customer Details -->
+          <div>
+            <h5 class="text-xs font-bold text-slate-800 uppercase tracking-wider mb-2 flex items-center gap-1.5">
+              <span class="w-5 h-5 rounded-full bg-rose-100 text-[#FF758C] flex items-center justify-center text-[10px]">১</span>
+              <span>ডেলিভারির প্রয়োজনীয় তথ্য:</span>
+            </h5>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs text-slate-600 mb-1 font-medium">আপনার পূর্ণ নাম *</label>
+                <input 
+                  type="text" 
+                  id="customer_name" 
+                  required 
+                  placeholder="যেমন: তানিয়া আহমেদ" 
+                  class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:outline-none focus:ring-2 focus:ring-[#FF758C] focus:bg-white transition-all"
+                />
+              </div>
+              <div>
+                <label class="block text-xs text-slate-600 mb-1 font-medium">সচল মোবাইল নম্বর *</label>
+                <input 
+                  type="tel" 
+                  id="customer_phone" 
+                  required 
+                  placeholder="017xxxxxxxx" 
+                  class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:outline-none focus:ring-2 focus:ring-[#FF758C] focus:bg-white transition-all"
+                />
+              </div>
+            </div>
+            
+            <div class="mt-3">
+              <label class="block text-xs text-slate-600 mb-1 font-medium">ডেলিভারির সম্পূর্ণ ঠিকানা (বাসা/রোড/এলাকা/জেলা) *</label>
+              <textarea 
+                id="customer_address" 
+                required 
+                rows="2" 
+                placeholder="বাসা নং, রোড নং, এলাকা এবং জেলা উল্লেখ করুন..." 
+                class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:outline-none focus:ring-2 focus:ring-[#FF758C] focus:bg-white transition-all"
+              ></textarea>
+            </div>
+
+            <!-- Delivery Location Selection -->
+            <div class="mt-3">
+              <label class="block text-xs text-slate-600 mb-1 font-medium">ডেলিভারি জোন নির্বাচন করুন *</label>
+              <div class="grid grid-cols-2 gap-3">
+                <label class="flex items-center gap-2 p-2.5 rounded-xl border border-slate-200 cursor-pointer hover:bg-rose-50/50 has-[:checked]:border-[#FF758C] has-[:checked]:bg-rose-50/80 transition-all">
+                  <input type="radio" name="delivery_zone" value="inside" checked class="text-[#FF758C] focus:ring-[#FF758C]">
+                  <div>
+                    <div class="text-xs font-bold text-slate-800">ঢাকা সিটির ভেতরে</div>
+                    <div id="checkout-charge-inside" class="text-[10px] text-slate-500">চার্জ: ৳৬০ (১-২ দিন)</div>
+                  </div>
+                </label>
+                <label class="flex items-center gap-2 p-2.5 rounded-xl border border-slate-200 cursor-pointer hover:bg-rose-50/50 has-[:checked]:border-[#FF758C] has-[:checked]:bg-rose-50/80 transition-all">
+                  <input type="radio" name="delivery_zone" value="outside" class="text-[#FF758C] focus:ring-[#FF758C]">
+                  <div>
+                    <div class="text-xs font-bold text-slate-800">ঢাকা সিটির বাইরে</div>
+                    <div id="checkout-charge-outside" class="text-[10px] text-slate-500">চার্জ: ৳১২০ (২-৩ দিন)</div>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <div class="mt-3">
+              <label class="block text-xs text-slate-600 mb-1">বিশেষ নির্দেশনা বা নোট (যদি থাকে)</label>
+              <input 
+                type="text" 
+                id="customer_notes" 
+                placeholder="যেমন: গিফট প্যাকেজিং দরকার / বিকেল ৫টার পর ডেলিভারি দিন" 
+                class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:outline-none focus:ring-2 focus:ring-[#FF758C]"
+              />
+            </div>
+          </div>
+
+          <!-- Payment Method (COD, bKash, Nagad) -->
+          <div>
+            <h5 class="text-xs font-bold text-slate-800 uppercase tracking-wider mb-2 flex items-center gap-1.5">
+              <span class="w-5 h-5 rounded-full bg-rose-100 text-[#FF758C] flex items-center justify-center text-[10px]">২</span>
+              <span>পেমেন্ট পদ্ধতি বেছে নিন:</span>
+            </h5>
+            
+            <div class="space-y-2.5">
+              
+              <!-- Cash on Delivery -->
+              <label class="flex items-center gap-3 p-3 rounded-2xl border border-slate-200 cursor-pointer hover:bg-rose-50/40 has-[:checked]:border-[#FF758C] has-[:checked]:bg-rose-50/60 transition-all">
+                <input type="radio" name="payment_method" value="Cash on Delivery" checked onchange="togglePaymentBoxes()" class="text-[#FF758C] focus:ring-[#FF758C]">
+                <div class="flex-1">
+                  <div class="text-xs font-bold text-slate-800 flex items-center gap-1.5">
+                    <span>💵 ক্যাশ অন ডেলিভারি (Cash on Delivery)</span>
+                    <span class="px-2 py-0.5 rounded-full text-[9px] bg-emerald-100 text-emerald-800 font-bold">জনপ্রিয়</span>
+                  </div>
+                  <div class="text-[10px] text-slate-500">পণ্য হাতে পেয়ে চেক করে সম্পূর্ণ মূল্য পরিশোধ করুন</div>
+                </div>
+              </label>
+
+              <!-- bKash -->
+              <label class="flex items-center gap-3 p-3 rounded-2xl border border-slate-200 cursor-pointer hover:bg-pink-50/40 has-[:checked]:border-[#E2136E] has-[:checked]:bg-pink-50/60 transition-all">
+                <input type="radio" name="payment_method" value="bKash" onchange="togglePaymentBoxes()" class="text-[#E2136E] focus:ring-[#E2136E]">
+                <div class="flex-1">
+                  <div class="text-xs font-bold text-slate-800 flex items-center gap-1.5">
+                    <span class="text-[#E2136E] font-black">bKash (বিকাশ)</span>
+                    <span class="px-2 py-0.5 rounded-full text-[9px] bg-pink-100 text-[#E2136E] font-bold">ইনস্ট্যান্ট পেমেন্ট</span>
+                  </div>
+                  <div class="text-[10px] text-slate-500">বিকাশে সেন্ড মানি করে TrxID দিয়ে অর্ডার নিশ্চিত করুন</div>
+                </div>
+                <span class="text-xs font-bold px-2 py-1 bg-[#E2136E] text-white rounded-lg">বিকাশ</span>
+              </label>
+
+              <!-- bKash Instruction & TrxID Input Box (Hidden initially) -->
+              <div id="bkash-input-box" class="hidden p-4 rounded-2xl bg-pink-50 border border-pink-200 text-xs space-y-3">
+                <div class="flex items-start gap-2 text-pink-900">
+                  <span>📱</span>
+                  <div>
+                    <strong>Eluno বিকাশ নম্বর:</strong> 
+                    <span id="bkash-display-number" class="font-bold text-slate-900 bg-white px-2 py-0.5 rounded border border-pink-200">01700-000000</span>
+                    <p class="text-[11px] text-pink-700 mt-0.5">বিকাশ অ্যাপে গিয়ে 'Send Money' করুন এবং নিচের তথ্য পূরণ করুন:</p>
+                  </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+                  <div>
+                    <label class="block text-[11px] text-slate-700 mb-1 font-medium">যে নম্বর থেকে বিকাশ করেছেন *</label>
+                    <input 
+                      type="tel" 
+                      id="bkash_sender" 
+                      placeholder="017xxxxxxxx" 
+                      class="w-full px-3 py-1.5 bg-white border border-pink-200 rounded-xl text-xs focus:outline-none focus:ring-1 focus:ring-pink-500"
+                    />
+                  </div>
+                  <div>
+                    <label class="block text-[11px] text-slate-700 mb-1 font-medium">বিকাশ Transaction ID (TrxID) *</label>
+                    <input 
+                      type="text" 
+                      id="bkash_trxid" 
+                      placeholder="যেমন: BKA9X82Z1" 
+                      class="w-full px-3 py-1.5 bg-white border border-pink-200 rounded-xl text-xs uppercase focus:outline-none focus:ring-1 focus:ring-pink-500"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Nagad -->
+              <label class="flex items-center gap-3 p-3 rounded-2xl border border-slate-200 cursor-pointer hover:bg-orange-50/40 has-[:checked]:border-[#F7941D] has-[:checked]:bg-orange-50/60 transition-all">
+                <input type="radio" name="payment_method" value="Nagad" onchange="togglePaymentBoxes()" class="text-[#F7941D] focus:ring-[#F7941D]">
+                <div class="flex-1">
+                  <div class="text-xs font-bold text-slate-800 flex items-center gap-1.5">
+                    <span class="text-[#F7941D] font-black">Nagad (নগদ)</span>
+                    <span class="px-2 py-0.5 rounded-full text-[9px] bg-orange-100 text-[#F7941D] font-bold">সেন্ড মানি</span>
+                  </div>
+                  <div class="text-[10px] text-slate-500">নগদে টাকা পাঠিয়ে TrxID দিয়ে নিশ্চিত করুন</div>
+                </div>
+                <span class="text-xs font-bold px-2 py-1 bg-[#F7941D] text-white rounded-lg">নগদ</span>
+              </label>
+
+              <!-- Nagad Instruction & TrxID Input Box (Hidden initially) -->
+              <div id="nagad-input-box" class="hidden p-4 rounded-2xl bg-orange-50 border border-orange-200 text-xs space-y-3">
+                <div class="flex items-start gap-2 text-orange-900">
+                  <span>📱</span>
+                  <div>
+                    <strong>Eluno নগদ নম্বর:</strong> 
+                    <span id="nagad-display-number" class="font-bold text-slate-900 bg-white px-2 py-0.5 rounded border border-orange-200">01800-000000</span>
+                    <p class="text-[11px] text-orange-700 mt-0.5">নগদ অ্যাপে গিয়ে 'Send Money' করুন এবং নিচের তথ্য দিন:</p>
+                  </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+                  <div>
+                    <label class="block text-[11px] text-slate-700 mb-1 font-medium">যে নম্বর থেকে নগদ করেছেন *</label>
+                    <input 
+                      type="tel" 
+                      id="nagad_sender" 
+                      placeholder="018xxxxxxxx" 
+                      class="w-full px-3 py-1.5 bg-white border border-orange-200 rounded-xl text-xs focus:outline-none focus:ring-1 focus:ring-orange-500"
+                    />
+                  </div>
+                  <div>
+                    <label class="block text-[11px] text-slate-700 mb-1 font-medium">নগদ Transaction ID (TrxID) *</label>
+                    <input 
+                      type="text" 
+                      id="nagad_trxid" 
+                      placeholder="যেমন: NGD72K9M" 
+                      class="w-full px-3 py-1.5 bg-white border border-orange-200 rounded-xl text-xs uppercase focus:outline-none focus:ring-1 focus:ring-orange-500"
+                    />
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Order Summary in Checkout -->
+          <div class="bg-rose-50/60 p-4 rounded-2xl border border-rose-200/70">
+            <h5 class="text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">অর্ডার সামারি:</h5>
+            <div id="checkout-items-list" class="space-y-1.5 max-h-36 overflow-y-auto pr-1 mb-3">
+              <!-- Rendered by app.js -->
+            </div>
+            <div class="space-y-1 text-xs text-slate-600 pt-2 border-t border-rose-200">
+              <div class="flex justify-between">
+                <span>সাব-টোটাল:</span>
+                <span id="checkout-subtotal" class="font-bold text-slate-800">৳০</span>
+              </div>
+              <div class="flex justify-between">
+                <span>ছাড়:</span>
+                <span id="checkout-discount" class="font-bold text-rose-600">৳০</span>
+              </div>
+              <div class="flex justify-between">
+                <span>ডেলিভারি চার্জ:</span>
+                <span id="checkout-delivery" class="font-bold text-slate-800">৳৬০</span>
+              </div>
+              <div class="flex justify-between text-sm font-black text-slate-900 pt-2 border-t border-rose-200">
+                <span>সর্বমোট প্রদেয়:</span>
+                <span id="checkout-total" class="text-[#FF758C]">৳০</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Submit Order Button -->
+          <button 
+            type="submit" 
+            class="w-full py-3.5 bg-gradient-to-r from-[#FF758C] to-[#FFA07A] hover:opacity-95 text-white font-extrabold rounded-2xl text-sm shadow-lg shadow-rose-400/25 flex items-center justify-center gap-2 transition-all">
+            <span>অর্ডারটি কনফার্ম করুন</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==========================================
+       ORDER SUCCESS RECEIPT MODAL
+  ========================================== -->
+  <div id="order-success-modal" class="modal-overlay fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4">
+    <div class="modal-content relative bg-white w-full max-w-lg rounded-3xl overflow-hidden shadow-2xl border border-rose-100 max-h-[90vh] overflow-y-auto p-6">
+      <div id="receipt-container">
+        <!-- Rendered by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       FLOATING WHATSAPP BUTTON (DIRECT ORDER)
+  ========================================== -->
+  <a 
+    id="floating-whatsapp-btn"
+    href="https://wa.me/?text=Hello%20Eluno!%20I%20would%20like%20to%20know%20more%20about%20your%20baby%20products." 
+    target="_blank" 
+    rel="noopener noreferrer"
+    title="হোয়াটসঅ্যাপে সরাসরি কথা বলুন বা অর্ডার দিন"
+    class="whatsapp-float bg-[#25D366] text-white p-3.5 rounded-full flex items-center justify-center shadow-lg group">
+    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+  </a>
+
+  <!-- JavaScript Modules -->
+  <script src="products.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
